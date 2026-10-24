@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিপ্লব ডিজিটাল পয়েন্ট - অনলাইন সার্ভিস</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #f4f6f9; color: #333; padding-bottom: 30px; }
+        header { background: linear-gradient(135deg, #0d47a1, #1e88e5); color: white; text-align: center; padding: 25px 15px; }
+        header h1 { font-size: 24px; margin-bottom: 5px; }
+        header p { font-size: 14px; opacity: 0.9; }
+        .container { max-width: 600px; margin: 20px auto; padding: 0 15px; }
+        .service-card { background: white; border-radius: 10px; padding: 15px; margin-bottom: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center; }
+        .service-card h3 { font-size: 16px; color: #0d47a1; }
+        .btn-apply { background: #25d366; color: white; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-weight: bold; font-size: 14px; }
+        .auth-bar { text-align: right; margin-bottom: 15px; }
+        .btn-login { background: #0d47a1; color: white; padding: 6px 12px; border-radius: 5px; text-decoration: none; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>বিপ্লব ডিজিটাল সার্ভিস পয়েন্ট</h1>
+        <p>সমস্ত ধরণের অনলাইন ফর্ম ফিলাপ ও ডিজিটাল পরিষেবা</p>
+    </header>
+
+    <div class="container">
+        <div class="auth-bar">
+            <a href="login.html" class="btn-login">কাস্টমার লগইন (OTP)</a>
+        </div>
+
+        <h2 style="margin-bottom: 15px; font-size: 18px; color: #444;">আমাদের পরিষেবাসমূহ:</h2>
+
+        <div class="service-card">
+            <div><h3>ভোটার কার্ড (নতুন/সংশোধনী)</h3><p style="font-size: 12px; color: #666;">নতুন আবেদন ও ডাউনলোড</p></div>
+            <a href="apply.html?service=voter" class="btn-apply">আবেদন করুন</a>
+        </div>
+
+        <div class="service-card">
+            <div><h3>প্যান কার্ড সার্ভিস</h3><p style="font-size: 12px; color: #666;">নতুন প্যান ও সংশোধনী</p></div>
+            <a href="apply.html?service=pan" class="btn-apply">আবেদন করুন</a>
+        </div>
+
+        <div class="service-card">
+            <div><h3>হাসপাতাল OPD টিকিট বুকিং</h3><p style="font-size: 12px; color: #666;">সরকারি হাসপাতালের টিকিট</p></div>
+            <a href="apply.html?service=opd" class="btn-apply">আবেদন করুন</a>
+        </div>
+
+        <div class="service-card">
+            <div><h3>আয়ুষ্মান ভারত ও স্বাস্থ্য বীমা</h3><p style="font-size: 12px; color: #666;">কার্ড ও e-KYC সার্ভিস</p></div>
+            <a href="apply.html?service=ayushman" class="btn-apply">আবেদন করুন</a>
+        </div>
+
+        <div class="service-card">
+            <div><h3>রেশন কার্ড সার্ভিস</h3><p style="font-size: 12px; color: #666;">নতুন ও সংশোধন</p></div>
+            <a href="apply.html?service=ration" class="btn-apply">আবেদন করুন</a>
+        </div>
+
+        <div class="service-card">
+            <div><h3>অনলাইন ফর্ম ফিলাপ ও স্কলারশিপ</h3><p style="font-size: 12px; color: #666;">কলেজ ভর্তি ও অন্যান্য ফর্ম</p></div>
+            <a href="apply.html?service=formfillup" class="btn-apply">আবেদন করুন</a>
+        </div>
+    </div>
+
+</body>
+</html>

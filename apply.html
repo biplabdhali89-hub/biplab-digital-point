@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আবেদন ফর্ম - বিপ্লব ডিজিটাল সার্ভিস</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { background: #f4f6f9; padding: 20px 10px; }
+        .form-card { max-width: 500px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #0d47a1; margin-bottom: 20px; font-size: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+        input, select, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; }
+        .btn-submit { width: 100%; background: #0d47a1; color: white; border: none; padding: 12px; font-size: 16px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .btn-back { display: block; text-align: center; margin-top: 15px; color: #666; text-decoration: none; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="form-card">
+        <h2>অনলাইন পরিষেবার আবেদন</h2>
+        <form id="applicationForm">
+            <div class="form-group">
+                <label>আবেদনকারীর নাম *</label>
+                <input type="text" id="applicantName" placeholder="আপনার পুরো নাম লিখুন" required>
+            </div>
+
+            <div class="form-group">
+                <label>মোবাইল নম্বর *</label>
+                <input type="tel" id="applicantPhone" placeholder="১০ সংখ্যার মোবাইল নম্বর" required>
+            </div>
+
+            <div class="form-group">
+                <label>পরিষেবা নির্বাচন করুন *</label>
+                <select id="serviceType" required>
+                    <option value="">-- নির্বাচন করুন --</option>
+                    <option value="voter">ভোটার কার্ড (নতুন/সংশোধন)</option>
+                    <option value="pan">প্যান কার্ড নতুন/সংশোধন</option>
+                    <option value="opd">হাসপাতাল OPD টিকিট বুকিং</option>
+                    <option value="ayushman">আয়ুষ্মান ভারত / স্বাস্থ্য বীমা</option>
+                    <option value="ration">রেশন কার্ড পরিষেবা</option>
+                    <option value="formfillup">স্কলারশিপ / ফর্ম ফিলাপ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>প্রয়োজনীয় ডকুমেন্টস (ছবি/PDF)</label>
+                <input type="file" id="documentUpload" accept="image/*,.pdf">
+            </div>
+
+            <div class="form-group">
+                <label>অতিরিক্ত বিবরণ (যদি থাকে)</label>
+                <textarea id="details" rows="3" placeholder="আপনার সমস্যা বা চাহিদার কথা সংক্ষেপে লিখুন..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">আবেদন জমা দিন</button>
+        </form>
+        <a href="index.html" class="btn-back">← হোম পেজে ফিরে যান</a>
+    </div>
+
+</body>
+</html>

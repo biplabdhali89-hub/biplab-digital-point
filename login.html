@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কাস্টমার লগইন - বিপ্লব ডিজিটাল সার্ভিস</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { background: #f4f6f9; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 15px; }
+        .login-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
+        h2 { color: #0d47a1; margin-bottom: 20px; font-size: 20px; }
+        .input-group { margin-bottom: 15px; text-align: left; }
+        label { display: block; margin-bottom: 5px; font-size: 14px; font-weight: bold; }
+        input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 15px; }
+        .btn-otp { width: 100%; background: #0d47a1; color: white; border: none; padding: 11px; font-size: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+        .btn-verify { width: 100%; background: #25d366; color: white; border: none; padding: 11px; font-size: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+        .hidden { display: none; }
+        .back-link { display: inline-block; margin-top: 15px; color: #555; text-decoration: none; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <h2>কাস্টমার অ্যাকাউন্ট লগইন</h2>
+        
+        <!-- Step 1: Mobile Input -->
+        <div id="phoneStep">
+            <div class="input-group">
+                <label>মোবাইল নম্বর লিখুন</label>
+                <input type="tel" id="phoneNumber" placeholder="+91 9876543210" value="+91">
+            </div>
+            <button class="btn-otp" onclick="handleSendOTP()">OTP পাঠান</button>
+        </div>
+
+        <!-- Step 2: OTP Verification (Initially Hidden) -->
+        <div id="otpStep" class="hidden">
+            <div class="input-group">
+                <label>আপনার ফোনে আসা 6-ডিজিটের OTP লিখুন</label>
+                <input type="number" id="otpCode" placeholder="123456">
+            </div>
+            <button class="btn-verify" onclick="handleVerifyOTP()">OTP যাচাই করুন</button>
+        </div>
+
+        <a href="index.html" class="back-link">← হোম পেজে ফিরে যান</a>
+    </div>
+
+    <script>
+        function handleSendOTP() {
+            let phone = document.getElementById('phoneNumber').value;
+            if (phone.length >= 10) {
+                alert(phone + " নম্বরে OTP পাঠানো হয়েছে (Firebase Setup এর পর কাজ করবে)");
+                document.getElementById('phoneStep').classList.add('hidden');
+                document.getElementById('otpStep').classList.remove('hidden');
+            } else {
+                alert("সঠিক মোবাইল নম্বর লিখুন");
+            }
+        }
+
+        function handleVerifyOTP() {
+            let otp = document.getElementById('otpCode').value;
+            if (otp.length === 6) {
+                alert("সফলভাবে লগইন হয়েছে!");
+                window.location.href = "index.html";
+            } else {
+                alert("সঠিক 6 সংখ্যার OTP দিন");
+            }
+        }
+    </script>
+</body>
+</html>

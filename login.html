@@ -66,5 +66,25 @@
             }
         }
     </script>
+    <!-- Firebase SDK & Configuration -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBAHlSRK09pfRFCXqovebfNhHIrMjJY7E",
+    authDomain: "biplab-digital-point-848c9.firebaseapp.com",
+    projectId: "biplab-digital-point-848c9",
+    storageBucket: "biplab-digital-point-848c9.firebasestorage.app",
+    messagingSenderId: "201302840802",
+    appId: "1:201302840802:web:455bc77c1e0f73cde895bb"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+</script>
 </body>
 </html>
